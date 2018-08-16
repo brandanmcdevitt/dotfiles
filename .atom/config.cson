@@ -1,0 +1,44 @@
+"*":
+  "atom-beautify":
+    css:
+      beautify_on_save: true
+    html:
+      beautify_on_save: true
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "one-dark-vivid-syntax"
+    ]
+    titleBar: "hidden"
+  editor:
+    fontFamily: "Menlo, Consolas, DejaVu Sans Mono, monospace,"
+    fontSize: 11
+  "exception-reporting":
+    userId: "990f2507-51b1-480d-bf1c-dc480999a231"
+  fonts:
+    fontFamily: "Roboto Mono"
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black: "#272c33"
+        blue: "#71bdf2"
+        cyan: "#65c1cd"
+        green: "#a7cb8b"
+        magenta: "#d190e3"
+        red: "#e78287"
+        white: "#b9bfca"
+        yellow: "#daaa78"
+      zBright:
+        brightBlack: "#6f7683"
+        brightBlue: "#71bdf2"
+        brightCyan: "#65c1cd"
+        brightGreen: "#a7cb8b"
+        brightMagenta: "#d190e3"
+        brightRed: "#e78287"
+        brightWhite: "#fefefe"
+        brightYellow: "#daaa78"
+    style:
+      theme: "one-dark"
+  welcome:
+    showOnStartup: false

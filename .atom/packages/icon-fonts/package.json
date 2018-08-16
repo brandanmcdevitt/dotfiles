@@ -1,0 +1,81 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+        "spec": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/apm-install-dir-118716-67138-vqd8ei.bg2ic0udi"
+    ]
+  ],
+  "_from": "../d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+  "_id": "icon-fonts@3.1.1",
+  "_inCache": true,
+  "_location": "/icon-fonts",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+    "spec": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+  "_shasum": "eb9332c04c7b0ed7ba4fcd10a6d977d27cacd784",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/d-118716-67138-1mswo8q.7neoyzm2t9/package.tgz",
+  "_where": "/private/var/folders/tj/2t4g853d10z5zj5w7rzh2r1r0000gn/T/apm-install-dir-118716-67138-vqd8ei.bg2ic0udi",
+  "author": {
+    "name": "Jan T. Sott",
+    "url": "http://github.com/idleberg"
+  },
+  "bugs": {
+    "url": "https://github.com/idleberg/atom-icon-fonts/issues"
+  },
+  "dependencies": {},
+  "description": "Atom snippets for a variety of icon fonts",
+  "devDependencies": {
+    "coffeelint-stylish": "^0.1.2",
+    "gulp": "^4.0.0",
+    "gulp-coffeelint": "^0.6.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-jsonlint": "^1.2.0",
+    "husky": "^0.14.3"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/idleberg/atom-icon-fonts#readme",
+  "keywords": [
+    "android icons",
+    "font awesome",
+    "glyphicon",
+    "semantic ui",
+    "webfont"
+  ],
+  "license": "MIT",
+  "name": "icon-fonts",
+  "optionalDependencies": {},
+  "readme": "# atom-icon-fonts\n\n[![apm](https://img.shields.io/apm/l/icon-fonts.svg?style=flat-square)](https://atom.io/packages/icon-fonts)\n[![apm](https://img.shields.io/apm/v/icon-fonts.svg?style=flat-square)](https://atom.io/packages/icon-fonts)\n[![apm](https://img.shields.io/apm/dm/icon-fonts.svg?style=flat-square)](https://atom.io/packages/icon-fonts)\n[![Travis](https://img.shields.io/travis/idleberg/atom-icon-fonts.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-icon-fonts)\n[![David](https://img.shields.io/david/dev/idleberg/atom-icon-fonts.svg?style=flat-square)](https://david-dm.org/idleberg/atom-icon-fonts?type=dev)\n\n**Note:** *As of v2.17, this package supports all __Font Awesome v5__ icons. If you need to continue the old __Font Awesome v4__ icons, please install the* [`icon-fonts-legacy`](https://github.com/idleberg/atom-icon-fonts-legacy) *package via `apm`!*\n\nAtom snippets for a variety of icon fonts ([see details](https://github.com/idleberg/atom-icon-fonts#prefixes)).\n\nThis package is also available for [Sublime Text](https://github.com/idleberg/sublime-icon-fonts) and [Visual Studio Code](https://github.com/idleberg/vscode-icon-fonts).\n\n## Installation\n\n### apm\n\n* Install package `apm install icon-fonts` (or use the GUI)\n\n### Using Git\n\n1. Change directory `cd ~/.atom/packages/`\n2. Clone repository `git clone https://github.com/idleberg/atom-icon-fonts icon-fonts`\n\n## Usage\n\nSnippets are limited to the `.text.html`, `source.(css|less|sass|scss|stylus)` and `.source.js.jsx` scopes. Typing the class name of an icon using the designated prefix will complete to a tag containing the icon class. Exceptions are `fa-layers`, `fa-layers-counter`, `fa-layers-text` and `fa-layers` (`<span>`).\n\n### Prefixes\n\nPrefix            | Icon Font                               | Version | cdnjs | jsDelivr\n------------------|-----------------------------------------|---------|-------|---------\n`ai`              | [Android Icons][ai]                     | 1.0.0   | 🚫    | 🚫\n`cc`              | [Creative Commons Icon Font][cc]        | 1.2.1   | ✅    | ✅\n`bx`              | [BoxIcons][bx]                          | -       | 🚫    | 🚫\n`dashicons`       | [WordPress Dashicons][dashicons]        | –       | 🚫    | 🚫\n`devicons`        | [Devicons][devicons]                    | 1.8.0   | ✅    | ✅\n`el`              | [Elusive Icons][el]                     | 2.0.0   | 🚫    | 🚫\n`fas`,`far`,`fab` | [Font Awesome Pro][fa]                  | 5.2.0   | ✅    | ✅\n`fi`              | [Foundation Icons][fi]                  | 3.0     | ✅    | ✅\n`fl`              | [Font Logos][fl]                        | 0.11    | 🚫    | 🚫\n`geomicon`        | [Geomicons Open][geomicon]              | 2.0.0   | 🚫    | ✅\n`glyphicon`       | [Bootstrap Glyphicons][glyphicon]       | 3.3.7   | 🚫    | 🚫\n`icono`           | [Icono][icono]                          | 1.3.0   | ✅    | 🚫\n`ion`             | [Ionicons][ion]                         | 2.0.1   | 🚫    | 🚫\n`mdi`             | [Material Design Icons][mdi]            | 2.4.85  | ✅    | 🚫\n`mfg`             | [MFG Labs Iconset][mfg]                 | –       | 🚫    | 🚫\n`mfizz`           | [Font Mfizz][mfizz]                     | 2.4.1   | ✅    | 🚫\n`mio`             | [Material Design Icons (Official)][mio] | 3.0.1   | 🚫    | 🚫\n`octicon`         | [GitHub Octicons][octicon]              | 4.1.0   | 🚫    | 🚫\n`oi`              | [Open Iconic][oi]                       | 1.1.0   | 🚫    | ✅\n`openwebicons`    | [OpenWeb Icons][openwebicons]           | 1.4.3   | ✅    | ✅\n`pf`              | [PaymentFont][pf]                       | 1.2.5   | ✅    | 🚫\n`ratchicon`       | [Ratchicons][ratchicon]                 | 2.0.2   | ✅    | ✅\n`st`              | [Stack Icons][st]                       | 1.0.0   | 🚫    | 🚫\n`typcn`           | [Typicons][typcn]                       | 2.0.7   | 🚫    | 🚫\n`wi`              | [Weather Icons][wi]                     | 2.0.10  | ✅    | 🚫\n`zmdi`            | [Material Design Iconic Font][zmdi]     | 2.2.0   | ✅    | 🚫\n\nSeveral previously supported fonts have been removed and are now available in the [SVG icons](https://github.com/idleberg/atom-svg-icons) package or the icon fonts [legacy package](https://github.com/idleberg/atom-icon-fonts-legacy).\n\nExamples:\n\n* `fa-check`+<kbd>Tab</kbd> completes to `<i class=\"fa fa-check\"></i>`\n* `glyphicon-check`+<kbd>Tab</kbd> completes to `<span class=\"glyphicon glyphicons-check\"></span>`\n* well, you get the idea\n\n### CDNs\n\nIf a supported CDN is indicated in the [table](#prefixes) above, you can use the prefixes `cdnjs` or `jsdelivr` to quickly insert a link to the CDN-hosted asset:\n\nExamples:\n\n* `cdnjs-fa`+<kbd>Tab</kbd> completes to a `<link>` tag to the Font Awesome style-sheet\n* `jsdelivr-fa`+<kbd>Tab</kbd> completes to a `<link>` tag to the Font Awesome style-sheet\n* `jsdelivr-geomicon`+<kbd>Tab</kbd> completes to a `<script>` tag to the Geomicons script\n\n## License\n\nThis work is licensed under the [The MIT License](LICENSE.md).\n\n## Donate\n\nYou are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/atom-icon-fonts) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`\n\n[ai]: https://github.com/opoloo/androidicons\n[bx]: https://github.com/atisawd/boxicons\n[cc]: https://github.com/cc-icons/cc-icons\n[dashicons]: https://github.com/WordPress/dashicons\n[devicons]: https://github.com/vorillaz/devicons\n[el]: https://github.com/reduxframework/Elusive-Icons\n[fa]: https://github.com/FortAwesome/Font-Awesome-Pro\n[fi]: https://github.com/zurb/foundation-icons\n[fl]: https://github.com/Lukas-W/font-linux\n[geomicon]: https://github.com/jxnblk/geomicons-open\n[glyphicon]: https://github.com/twbs/bootstrap/tree/v3.3.7\n[icono]: https://github.com/saeedalipoor/icono\n[ion]: https://github.com/driftyco/ionicons\n[mdi]: https://github.com/Templarian/MaterialDesign-Webfont\n[mfg]: https://github.com/MfgLabs/mfglabs-iconset\n[mfizz]: https://github.com/fizzed/font-mfizz\n[mio]: https://github.com/google/material-design-icons\n[octicon]: https://github.com/primer/octicons/tree/v4.1.0\n[oi]: https://github.com/iconic/open-iconic\n[openwebicons]: https://github.com/pfefferle/openwebicons\n[pf]: https://github.com/vendocrat/PaymentFont\n[ratchicon]: http://github.com/twbs/ratchet\n[st]: https://github.com/parkerbennett/stackicons\n[typcn]: https://github.com/stephenhutchings/typicons.font\n[wi]: https://github.com/erikflowers/weather-icons\n[zmdi]: https://github.com/zavoloklom/material-design-iconic-font\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idleberg/atom-icon-fonts.git"
+  },
+  "scripts": {
+    "build": "cd tools && yarn",
+    "prepush": "npm test",
+    "test": "gulp lint"
+  },
+  "version": "3.1.1"
+}

@@ -1,0 +1,158 @@
+@import "ui-variables";
+
+#atom-no-title-bar() {
+  // Ensure vertical offsets so that title bar is hidden and panels
+  // such as the tree-view, for example, are properly adjusted.
+  .ensure-vertical-offsets() {
+    // The units given to max() must match. I've seen themes use px and rem
+    // before, so those two cases are defined here. If there are other
+    // themes out there that use different units, they must be added.
+    atom-panel-container when (ispixel(@tab-height)) {
+      @panel-margin-top: max(@title-bar-height, @tab-height);
+      &.left { margin-top: @panel-margin-top; }
+      &.right { margin-top: @panel-margin-top; }
+    }
+
+    atom-panel-container when (isunit(@tab-height, rem)) {
+      @tile-bar-height-rem: unit(unit(@title-bar-height) / unit(@font-size), rem);
+      @panel-margin-top: max(@tile-bar-height-rem, @tab-height);
+      &.left { margin-top: @panel-margin-top; }
+      &.right { margin-top:@panel-margin-top; }
+    }
+  }
+
+  // Vertical offsets will vary slightly by title bar setting and ui theme.
+  .no-title-bar:not(.fullscreen).custom-title-bar > atom-workspace {
+    & {
+      @title-bar-height: 22px;
+      .ensure-vertical-offsets();
+    }
+    &.theme-one-light-ui, &.theme-one-dark-ui {
+      @title-bar-height: 23px;
+      .ensure-vertical-offsets();
+    }
+  }
+  .no-title-bar:not(.fullscreen).custom-inset-title-bar > atom-workspace {
+    & {
+      @title-bar-height: 38px;
+      .ensure-vertical-offsets();
+    }
+    &.theme-one-light-ui, &.theme-one-dark-ui {
+      @title-bar-height: 39px;
+      .ensure-vertical-offsets();
+    }
+  }
+
+  // Vertical offset space of panels should blend with inactive tabs,
+  // except for Native UI when macOS transparency is enabled.
+  :not(.native-ui-macTransparency) {
+    .no-title-bar:not(.fullscreen) > atom-workspace.theme-unity-ui {
+      atom-workspace-axis.horizontal {
+        background-color: @tab-bar-background-color;
+      }
+    }
+  }
+
+  // Hide the title bar!
+  atom-workspace {
+    .title-bar, .title-bar .title {
+      display: none;
+    }
+  }
+
+  .no-title-bar:not(.fullscreen) > atom-workspace {
+    // Liberal drag is applied when enableLiberalWindowDragging is on.
+    // -webkit-app-region: drag;
+
+    // Specifically enable window drag in empty area of tab bar only.
+    .tab-bar {
+      -webkit-app-region: drag;
+    }
+
+    // Specifically disable drag where we absolutely never want it.
+    .atom-dock-resize-handle,
+    .editor,
+    .key-binding-resolver,      // don't interfere with keybinding resolver
+    .linter,                    // copy/paste in linter v2 table
+    .markdown-preview,          // copy/paste in Markdown preview
+    .settings-view,             // copy/paste in settings pane text
+    .tab-bar .tab,              // reordering of tabs
+    .tree-view .entry,          // reordering of tree-view items
+    .tree-view-resize-handle,
+    atom-pane-resize-handle,
+    atom-pane-resize-handle.horizontal:before,
+    atom-pane-resize-handle.vertical:before,
+    div[class^="github-"],                  // github tabs and toolbars
+    linter-message .linter-message-item,    // copy/paste linter v1
+    linter-message .linter-message-link     // copy/paste linter v1
+    {
+      -webkit-app-region: no-drag;
+    }
+
+    // Ensure title bar is completely gone.
+    .title-bar,
+    .tool-bar,
+    .tool-bar button.tool-bar-btn {
+      border-width: 0;
+    }
+  }
+
+  // Tweaks specific to Atom One * UI themes.
+  .no-title-bar:not(.fullscreen):not(.hidden-title-bar) {
+    .theme-one-light-ui, .theme-one-dark-ui {
+      .settings-panel {
+        border-top-width: 0 !important;
+      }
+
+      atom-panel-container.left + atom-workspace-axis.vertical {
+        .pane:nth-child(1) .tab-bar {
+          margin-left: -1px;
+
+          .tab:nth-child(1) {
+            border-left: 1px solid @tab-bar-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Tweaks specific to the native-ui theme.
+  .no-title-bar:not(.fullscreen):not(.hidden-title-bar) {
+    .theme-native-ui {
+      // Fixes the background color of the tab-bar padding.
+      atom-panel-container.left + atom-workspace-axis.vertical .pane:nth-child(1) .tab-bar {
+        background-color: #B3B3B3 !important;
+        background-image: none !important;
+
+        // Adds the missing left tab border to the first tab.
+        .tab:nth-child(1) { border-left: 1px solid @input-border-color; }
+      }
+
+      // Makes atom-dock border line up with border of left most tab.
+      atom-dock.left {
+        margin-right: -1px;
+      }
+    }
+  }
+
+  // Tweaks specific to the unity-ui theme.
+  .no-title-bar:not(.fullscreen):not(.hidden-title-bar) {
+    .theme-unity-ui {
+      // Fixes the background color of the tab-bar padding.
+      atom-panel-container.left + atom-workspace-axis.vertical .pane:nth-child(1) .tab-bar {
+        background-color: #CCCBCC !important;
+        background-image: none !important;
+
+        // Adds the missing left tab border to the first tab.
+        .tab:nth-child(1) { border-left: 1px solid @tab-bar-border-color; }
+      }
+
+      // Makes atom-dock border line up with border of left most tab.
+      atom-dock.left {
+        margin-right: -1px;
+      }
+    }
+  }
+}
+
+#atom-no-title-bar;

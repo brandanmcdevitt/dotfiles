@@ -10,8 +10,8 @@ alt - j : chunkc tiling::window --focus south
 alt - k : chunkc tiling::window --focus north
 alt - l : chunkc tiling::window --focus east
 
-cmd - j : chunkc tiling::window --focus prev
-cmd - k : chunkc tiling::window --focus next
+# cmd - j : chunkc tiling::window --focus prev
+# cmd - k : chunkc tiling::window --focus next
 
 # equalize size of windows
 shift + alt - 0 : chunkc tiling::desktop --equalize
@@ -143,7 +143,7 @@ ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
 
 # remap caps-lock to escape for this config only !!!
 # macos sierra can also perform this remap for a given keyboard
-- capslock : khd -p "- escape"
+# - capslock : khd -p "- escape"
 
 # key remap for norwegian layout \ { }
 cmd - 7 : khd -p "shift + alt - 7"
