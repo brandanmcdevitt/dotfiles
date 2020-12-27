@@ -54,6 +54,8 @@ ZSH_THEME="spaceship"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+POWERLEVEL9K_MODE='nerdfont-complete'
+
 # EXECUTION TIME
 SPACESHIP_EXEC_TIME_SHOW="${SPACESHIP_EXEC_TIME_SHOW:=false}"
 SPACESHIP_EXEC_TIME_PREFIX="${SPACESHIP_EXEC_TIME_PREFIX:="took "}"
@@ -72,6 +74,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $(dirname $(gem which colorls))/tab_complete.sh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/brandanmcdevitt/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -106,16 +110,17 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias dunnet='emacs -batch -l dunnet'
 alias xcode='open -a Xcode'
-alias atom='open -a Atom'
 alias diablo='open -a /Applications/Diablo\ II/Diablo\ II.app'
-alias osxey='mavericksey -c'
 alias ls='colorls'
+alias osxey='mavericksey -c'
 alias how='howdoi -c'
+
+export PATH=$PATH:/Users/brandanmcdevitt/.nexustools
 
 # old encryption method (not as secure)
 function old_encrypt() { openssl aes-256-cbc -salt -in $1 -out $2; }
 function old_decrypt() { openssl aes-256-cbc -d -in $1 -out $2; }
 
 # current encryption method (using GPG)
-function encrypt() { gpg --output $1 --symmetric --cipher-algo AES256 $2; }
-function decrypt() { gpg --output $1 --decrypt $2; }
+function encrypt() { gpg --output $1 --symmetric --no-symkey-cache --cipher-algo AES256 $2; }
+function decrypt() { gpg --output $1 --decrypt --no-symkey-cache $2; }
