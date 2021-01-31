@@ -107,4 +107,6 @@ cp zsh/custom/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 cp zsh/custom/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
 cp zsh/.zshrc ~/
 
+cp colorls/dark_colors.yaml ~/.config/colorls/dark_colors.yaml
+
 echo "Dotfiles updated"
