@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+current_directory=$(pwd)
+
 echo "Installing Packages..."
 
+# Install Homebrew if it's not already installed
 if test ! $(which brew); then
     echo "Installing homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -8,6 +11,7 @@ fi
 
 brew update
 
+# Brew packages to install
 PACKAGES=(
     zsh
     fortune
@@ -20,6 +24,7 @@ brew install ${PACKAGES[@]}
 echo "Cleaning up..."
 brew cleanup
 
+# Brew casks to install
 CASKS=(
     bitwarden
     charles
@@ -39,6 +44,7 @@ CASKS=(
 read -p "Is this a work environment? (Y/N): " environment
 
 if [[ $environment == [nN] || $environment == [nN][oO] ]]; then
+    # Additional casks to install if running on a home environment
     CASKS+=(
         discord
         dropbox
@@ -48,21 +54,27 @@ if [[ $environment == [nN] || $environment == [nN][oO] ]]; then
         qbittorrent
     )
 
-    current_directory=$(pwd)
-
     # Install Sketch@55.2-78181
-    cd "$(brew --repo homebrew/core)" && git checkout 908eea010dc48fb01643fb92c96cd160ef005cfb
+    cd "$(brew --repo homebrew/cask)" && git checkout 908eea010dc48fb01643fb92c96cd160ef005cfb
     HOMEBREW_NO_AUTO_UPDATE=1 brew install --cask sketch
-    brew pin sketch
     git checkout master
     cd $current_directory
 fi
+
+# Install Spotmenu@1.8
+cd "$(brew --repo homebrew/cask)" && git checkout 295ffc11c10e1f8297bf70192d45155d90cfbeaa
+HOMEBREW_NO_AUTO_UPDATE=1 brew install --cask spotmenu
+brew pin spotmenu
+git checkout master
+cd $current_directory
 
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
 
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
+
+# Array of fonts to install
 FONTS=(
     font-hack-nerd-font
     font-droid-sans-mono-for-powerline
