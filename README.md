@@ -8,3 +8,8 @@ run `./install.sh`
 
 Preferences > Profiles > Other Actions > Import JSON Profiles > `iterm/Bubblegum.json`</br>
 Preferences > Profiles > Colors > Color Presets... > Import > `iterm/colors/Bubblegum.itermcolors`</br>
+
+## Upodate Slack Theme
+<i>❗️This process needs automated. For the time being these profiles will need to be updated manually</i></br>
+
+Preferences > Themes > `.slacktheme`
