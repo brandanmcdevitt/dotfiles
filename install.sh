@@ -15,6 +15,7 @@ brew update
 PACKAGES=(
     fortune
     mas
+    node
     wget
     zsh
 )
@@ -85,6 +86,13 @@ FONTS=(
 
 brew install --cask ${FONTS[@]}
 
+# Install Powerline Fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
 echo "Installing Ruby gems..."
 RUBY_GEMS=(
     cocoapods
@@ -93,6 +101,8 @@ RUBY_GEMS=(
 )
 
 sudo gem install ${RUBY_GEMS[@]}
+
+npm install -g spaceship-prompt
 
 echo "Installing App Store applications.."
 
