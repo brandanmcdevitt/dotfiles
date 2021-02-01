@@ -100,6 +100,8 @@ echo "Installing App Store applications.."
 mas install 937984704
 # Install Wipr
 mas install 1320666476
+# Install DevCleaner
+mas install 1388020431
 
 echo "Configuring OSX System Settings..."
 
