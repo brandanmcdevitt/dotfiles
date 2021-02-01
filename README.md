@@ -1,11 +1,10 @@
-# Custom Setup on MacOS
+# Mac OSX Configurations
 
-<img src="https://github.com/brandanmcdevitt/dotfiles/blob/master/screenshot.png">
+## Install
+run `./install.sh`
 
-* Terminal: [iterm2](https://www.iterm2.com)
-* Window Manager: [chunkwm](https://github.com/koekeishiya/chunkwm)
-* Colorscheme: [One Dark](https://github.com/nathanbuchar/atom-one-dark-terminal)
-* Font: [Hack](https://github.com/source-foundry/Hack)
-* Shell: zsh
-* Prompt: [spaceship](https://github.com/denysdovhan/spaceship-prompt)
-* Music Widget: [Bowtie](http://bowtieapp.com)
+## Update iTerm profiles
+<i>❗️This process needs automated. For the time being these profiles will need to be updated manually</i></br>
+
+Preferences > Profiles > Other Actions > Import JSON Profiles > `iterm/Bubblegum.json`</br>
+Preferences > Profiles > Colors > Color Presets... > Import > `iterm/colors/Bubblegum.itermcolors`</br>
