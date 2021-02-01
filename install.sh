@@ -13,9 +13,10 @@ brew update
 
 # Brew packages to install
 PACKAGES=(
-    zsh
     fortune
+    mas
     wget
+    zsh
 )
 
 echo "Installing packages..."
@@ -92,6 +93,13 @@ RUBY_GEMS=(
 )
 
 sudo gem install ${RUBY_GEMS[@]}
+
+echo "Installing App Store applications.."
+
+# Install Amphetamine
+mas install 937984704
+# Install Wipr
+mas install 1320666476
 
 echo "Configuring OSX System Settings..."
 
