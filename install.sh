@@ -35,6 +35,7 @@ CASKS=(
     notion
     pdf-expert
     postman
+    signal
     simsims
     slack
     spotify
