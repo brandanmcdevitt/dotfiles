@@ -141,3 +141,8 @@ cp zsh/.zshrc ~/
 cp colorls/dark_colors.yaml ~/.config/colorls/dark_colors.yaml
 
 echo "Dotfiles updated"
+
+echo "Downloading wallpaper..."
+wget https://images.unsplash.com/photo-1539949936757-dfa9864987de?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3456&q=100.jpg
+
+echo "Finished downloading wallpaper"
