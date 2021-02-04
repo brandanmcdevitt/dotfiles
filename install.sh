@@ -42,6 +42,7 @@ CASKS=(
     the-unarchiver
     visual-studio-code
     whatsapp
+    zoom
 )
 
 read -p "Is this a work environment? (Y/N): " environment
@@ -53,6 +54,7 @@ if [[ $environment == [nN] || $environment == [nN][oO] ]]; then
         dropbox
         google-drive
         mamp
+        openemu
         plex-media-server
         qbittorrent
     )
