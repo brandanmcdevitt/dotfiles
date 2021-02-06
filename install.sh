@@ -35,13 +35,11 @@ CASKS=(
     notion
     pdf-expert
     postman
-    signal
     simsims
     slack
     spotify
     the-unarchiver
     visual-studio-code
-    whatsapp
     zoom
 )
 
@@ -57,6 +55,8 @@ if [[ $environment == [nN] || $environment == [nN][oO] ]]; then
         openemu
         plex-media-server
         qbittorrent
+        signal
+        whatsapp
     )
 
     # Install Sketch@55.2-78181
