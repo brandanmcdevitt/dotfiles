@@ -96,31 +96,3 @@ source /Users/brandanmcdevitt/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias dunnet='emacs -batch -l dunnet'
-alias xcode='open -a Xcode'
-alias diablo='open -a /Applications/Diablo\ II/Diablo\ II.app'
-alias ls='colorls'
-alias osxey='mavericksey -c'
-alias how='howdoi -c'
-
-export PATH=$PATH:/Users/brandanmcdevitt/.nexustools
-
-# old encryption method (not as secure)
-function old_encrypt() { openssl aes-256-cbc -salt -in $1 -out $2; }
-function old_decrypt() { openssl aes-256-cbc -d -in $1 -out $2; }
-
-# current encryption method (using GPG)
-function encrypt() { gpg --output $1 --symmetric --no-symkey-cache --cipher-algo AES256 $2; }
-function decrypt() { gpg --output $1 --decrypt --no-symkey-cache $2; }
