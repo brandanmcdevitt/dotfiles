@@ -11,6 +11,6 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias dunnet='emacs -batch -l dunnet'
 alias xcode='open -a Xcode'
-alias diablo='open -a /Applications/Diablo\ II/Diablo\ II.app'
+alias diablo='wine ~/Games/Diablo\ II/Diablo\ II.exe'
 alias ls='colorls'
 alias osxey='mavericksey -c'

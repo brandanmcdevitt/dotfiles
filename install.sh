@@ -64,6 +64,9 @@ if [[ $environment == [nN] || $environment == [nN][oO] ]]; then
     HOMEBREW_NO_AUTO_UPDATE=1 brew install --cask sketch
     git checkout master
     cd $current_directory
+    
+    # Install wine
+    brew tap gcenx/wine && brew install --cask --no-quarantine wine-crossover
 fi
 
 # Install Spotmenu@1.8
